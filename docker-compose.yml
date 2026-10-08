@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  jkt48-bot:
+    build: .
+    container_name: jkt48-live-bot
+    restart: unless-stopped
+    volumes:
+      - ./auth_session:/app/auth_session
+      - ./data:/app/data
+    environment:
+      - NODE_ENV=production
+      - WA_CHANNEL_JID=${WA_CHANNEL_JID:-}
+    stdin_open: true
+    tty: true

@@ -1,0 +1,10 @@
+name: jkt48-live-bot
+services:
+  - name: jkt48-live-bot
+    type: worker
+    docker:
+      dockerfile: Dockerfile
+    instance_type: nano
+    env:
+      - key: NODE_ENV
+        value: production

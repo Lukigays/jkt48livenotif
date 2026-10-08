@@ -1,0 +1,11 @@
+node_modules
+npm-debug.log
+auth_session
+live_state.json
+.git
+.gitignore
+.env
+.env.*
+*.md
+setup.sh
+setup.bat

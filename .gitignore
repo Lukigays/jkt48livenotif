@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Auth session (contains WhatsApp credentials)
+auth_session/
+auth_*/
+
+# State file
+live_state.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker volumes
+data/

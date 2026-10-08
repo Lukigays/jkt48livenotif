@@ -1,0 +1,12 @@
+services:
+  - type: worker
+    name: jkt48-live-bot
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    autoDeploy: false
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: WA_CHANNEL_JID
+        sync: false

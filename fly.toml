@@ -1,0 +1,19 @@
+app = "jkt48-live-bot"
+primary_region = "sin"  # Singapore, dekat Indonesia
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  NODE_ENV = "production"
+
+[mounts]
+  source = "jkt48_data"
+  destination = "/app/auth_session"
+
+[processes]
+  app = "node src/index.js"
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
